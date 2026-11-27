@@ -1,0 +1,19 @@
+# ============================================================================
+# OBS 桶策略版本化（Serverless）— Terraform 变量示例
+#
+# 凭据（AK / SK）一律通过环境变量注入，禁止写入本文件或任何 .tfvars：
+#   export HW_ACCESS_KEY="<HW_ACCESS_KEY>"
+#   export HW_SECRET_KEY="<HW_SECRET_KEY>"
+#
+# 使用方式：
+#   cp terraform.tfvars.example terraform.tfvars
+#   vim terraform.tfvars    # 按需修改非凭据字段
+#   terraform apply
+# ============================================================================
+
+region = "cn-north-4"
+
+project_name = "obs-bucket-policy-versioning"
+
+# 存储桶策略版本快照的 OBS 桶名（全局唯一）
+store_bucket_name = "obs-bucket-policy-versioning-store"
