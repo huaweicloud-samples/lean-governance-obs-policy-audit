@@ -1,0 +1,5 @@
+# 仅用于本地开发/单元自测：在本地跑 index.py 时需要 esdk-obs-python。
+# ⚠️ 部署打包【不要】把它打进 zip —— FGS Python3.9 运行时已内置 esdk-obs-python，
+#    自带 obs 反而会把 cryptography 的 Windows .pyd 带进去，导致 FGS(Linux) 加载失败。
+#    部署只打包 index.py（见 src/functions/build.sh）。
+esdk-obs-python>=3.23.0
